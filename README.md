@@ -80,7 +80,7 @@ This directory contains the artifacts for the 'On the Effectiveness of CFI in Pr
    It is advisable to raise `MAXMEM` in `ghidra/support/analyzeHeadless` depending on the available resources.
 - [radare2](https://github.com/radareorg/radare2)  
   Used for batch analysis (r2pipe)
-- [rizin](https://rizin.re/)
+- [rizin](https://rizin.re/)  
   Used for batch analysis (for some functionality due to bugs in radare2)
-- bindfs
+- bindfs  
   Used for re-mounting firmware accessible to users without root.
