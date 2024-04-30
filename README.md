@@ -8,7 +8,7 @@ This directory contains the artifacts for the 'On the Effectiveness of CFI in Pr
   - `external_analysis.py` Used by asa.py, angr-based analysis to extract targets from `__cfi_check`.
   - `gen_comparison_table.py` Code used to generate statistics in LLVM CFI-related tables from the paper.
   - `internal_analysis_ghidra.py` Headless-ghidra script to collect CFI slowpath / icalls. 
-  - `internal_analysis.py` A wrapper calling run_ghidra_headless.sh to execute `internal_analysis_ghidra.py`.
+  - `internal_analysis.py` A wrapper `calling run_ghidra_headless.sh` to execute `internal_analysis_ghidra.py`.
   - `pa_coverage.py` Generates file with PA coverage information from `.pkl`
   - `run_ghidra_headless.sh` Bash script to invoke GHDira.
   - `rust_analysis.py` Used by asa.py, Rust symbol detection.
