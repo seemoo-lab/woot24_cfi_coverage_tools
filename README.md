@@ -65,7 +65,18 @@ This directory contains the artifacts for the 'On the Effectiveness of CFI in Pr
      python3 asa.py -p "Android-AARCH64" --rebase-ldpaths -e outdir/gsi_14.pkl -l "/system/system_ext/apex/com.android.runtime/lib64/bionic/:/system/system_ext/apex/com.android.i18n/lib64/:/system/system_ext/apex/com.google.android.art/lib64/:/system/system_ext/apex/com.google.android.os.statsd/lib64/:/system/system_ext/apex/com.google.android.adbd/lib64/:/system/system_ext/apex/com.google.android.media/lib64/:/system/system_ext/apex/com.google.android.tethering/lib64/:/system/system_ext/apex/com.google.android.resolv/lib64/" /mnt/gsi_14_bind/
    ```
 6. Prepare cache with PA data: `python3 pa_coverage.py outdir`
-7. Perform arbitrary analysis on result data. For examples, see the code in `gen_comparison_table.py` (modify `target_dirs` as needed).
+7. Perform arbitrary analysis on result data. For examples, see the snippets below or the code in `gen_comparison_table.py` (modify `target_dirs` as needed).
+   ```python
+with open(join(target_dir, p), "rb") as f:
+    cfidata = list(pickle.load(f).values())
+    
+    bins = [d for d in data if not d.is_library and "ko" not in d.trait and "oat" not in d.trait and "rust" not in d.trait]
+    libs = [d for d in data if     d.is_library and "ko" not in d.trait and "oat" not in d.trait and "rust" not in d.trait]
+    kos  = [d for d in data if                      "ko"     in d.trait]
+    
+    # get protected binaries
+    [b.path for b in bins if b.has_cfi_check]
+   ```
 
 
 ## Setup and instructions for analysing Windows image
