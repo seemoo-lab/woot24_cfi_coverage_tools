@@ -66,7 +66,7 @@ This directory contains the artifacts for the 'On the Effectiveness of CFI in Pr
    ```
 6. Prepare cache with PA data: `python3 pa_coverage.py outdir`
 7. Perform arbitrary analysis on result data. For examples, see the snippets below or the code in `gen_comparison_table.py` (modify `target_dirs` as needed).
-   ```python
+```python
 with open(join(target_dir, p), "rb") as f:
     cfidata = list(pickle.load(f).values())
     
@@ -76,7 +76,7 @@ with open(join(target_dir, p), "rb") as f:
     
     # get protected binaries
     [b.path for b in bins if b.has_cfi_check]
-   ```
+```
 
 
 ## Setup and instructions for analysing Windows image
