@@ -95,3 +95,5 @@ with open(join(target_dir, p), "rb") as f:
   Used for batch analysis (for some functionality due to bugs in radare2)
 - bindfs  
   Used for re-mounting firmware accessible to users without root.
+- binutils-aarch64-linux-gnu
+  Used to check for shadowstack instructions in aarch64 executables.
