@@ -1,5 +1,5 @@
 # Artifacts for the 'On the Effectiveness of CFI in Practice' paper
-This directory contains the artifacts for the 'On the Effectiveness of CFI in Practice' paper to be published at WOOT'24.
+This directory contains the artifacts for the ['On the Effectiveness of CFI in Practice'](https://github.com/seemoo-lab/woot24_cfi_coverage_tools.git) paper published at WOOT'24.
 
 ## Structure
 - `asa`
